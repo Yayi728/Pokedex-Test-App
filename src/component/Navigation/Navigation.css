@@ -1,0 +1,87 @@
+.home-link {
+  background-color: rgb(240, 240, 240);
+  border: 0.2rem solid #851bed;
+  color: rgb(133, 27, 237);
+}
+
+.home-link:hover {
+  animation: colorchange 0.25s forwards;
+}
+
+@keyframes colorchange {
+  100% {
+    background-color: #888b8f;
+    color: #f8f9fa;
+  }
+}
+
+.home-link:hover img {
+  animation: fastspin 0.25s forwards;
+}
+
+@keyframes fastspin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.git-link:hover img {
+  animation: coinspin 0.75s forwards;
+}
+
+@keyframes coinspin {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(360deg);
+  }
+}
+
+.scroll-in {
+  position: fixed;
+  right: -72px;
+  bottom: 3rem;
+  animation: fadeinabove 0.3s linear forwards;
+  z-index: 1;
+}
+
+.scroll-in:hover {
+  animation: fadeinabove, slideinright;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes slideinright {
+  from {
+    transform: translateX(0px);
+  }
+  to {
+    transform: translateX(-72px);
+  }
+}
+
+.scroll-out {
+  position: fixed;
+  right: -72px;
+  bottom: 3rem;
+  animation: fadeoutabove 0.2s linear forwards;
+}
+
+.scroll-out:hover {
+  right: 0px;
+}
+
+@keyframes fadeoutabove {
+  99% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  100% {
+    z-index: -2;
+    transform: translateY(-10px);
+  }
+}
